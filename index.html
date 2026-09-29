@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Aplikacja pogodowa</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    
+    <div class="weather-card">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Wpisz nazwę miasta..." spellcheck="false">
+            <button id="search-btn">Szukaj</button>
+        </div>
+
+        <div class="weather-info" style="display: none;">
+            <h2 id="city-name">Warszawa</h2>
+            <div class="temp">
+                <span id="temperature">22</span>°C
+            </div>
+            <p id="description">Bezchmurnie</p>
+            <div class="details">
+                <div class="col">
+                    <p>Wilgotność</p>
+                    <span id="humidity">50%</span>
+                </div>
+                <div class="col">
+                    <p>Wiatr</p>
+                    <span id="wind">15 km/h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-msg" style="display: none;">Nie znaleziono miasta. Spróbuj ponownie.</div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="config.js"></script>
 </body>
 </html>
